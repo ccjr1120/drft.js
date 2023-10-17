@@ -9,25 +9,23 @@ import {
   CanvasKit,
   Surface,
 } from '../../../node_modules/canvaskit-wasm/types/index'
+import { RenderSetupOptions } from '../index.d'
 
 class CanvasKitRenderer extends DrftRenderer {
   renderDom: HTMLCanvasElement
   CanvasKit: CanvasKit
   surface: Surface
 
-  constructor(renderDom: HTMLCanvasElement) {
-    super()
-    this.renderDom = renderDom
-    CanvasKitInit({
+  async setup(options: RenderSetupOptions) {
+    this.renderDom = options.renderDom
+    this.CanvasKit = await CanvasKitInit({
       locateFile: () => CanvasKitWasm,
-    }).then((CanvasKit: CanvasKit) => {
-      this.CanvasKit = CanvasKit
-      this.surface = CanvasKit.MakeCanvasSurface(renderDom)
     })
+    this.surface = this.CanvasKit.MakeWebGLCanvasSurface(this.renderDom)
+    this.example()
   }
 
   example(): () => void {
-    console.log(this.CanvasKit)
     const paint = new this.CanvasKit.Paint()
     paint.setColor(this.CanvasKit.Color4f(0.9, 0, 0, 1.0))
     paint.setStyle(this.CanvasKit.PaintStyle.Stroke)

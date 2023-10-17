@@ -1,6 +1,7 @@
+import { RenderSetupOptions } from './index.d'
 abstract class DrftRenderer {
   abstract renderDom: HTMLCanvasElement
-  abstract example(): () => void
+  abstract setup(options: RenderSetupOptions): Promise<void> | void
 }
 
 export default DrftRenderer

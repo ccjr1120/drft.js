@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "pnpm git cz",
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "example-dev": "cd example && pnpm dev"
   },
   "lint-staged": {
     "packages/**/*.{js,jsx,ts,tsx,json}": [
