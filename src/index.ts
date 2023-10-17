@@ -1,15 +1,18 @@
-import DrftRenderer, { CanvasKitRenderer } from './renderer/DrftRenderer'
+import CanvasKitRenderer from './renderer/CanvasKit/index'
+import DrftRenderer from './renderer/DrftRenderer'
 
 class Drft {
   renderer: DrftRenderer
 
-  constructor(options: {
-    target: string | HTMLCanvasElement
-    renderer?: DrftRenderer
-  }) {
+  constructor(options: { target: HTMLCanvasElement; renderer?: DrftRenderer }) {
     this.renderer = options.renderer
       ? options.renderer
-      : new CanvasKitRenderer()
+      : new CanvasKitRenderer(options.target)
+    this.renderer.renderDom = options.target
+  }
+
+  example() {
+    this.renderer.example()
   }
 }
 export default Drft

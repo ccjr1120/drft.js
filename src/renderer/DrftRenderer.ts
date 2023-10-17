@@ -1,6 +1,6 @@
-import CanvasKitRenderer from './CanvasKit/index'
-
-class DrftRenderer {}
+abstract class DrftRenderer {
+  abstract renderDom: HTMLCanvasElement
+  abstract example(): () => void
+}
 
 export default DrftRenderer
-export { CanvasKitRenderer }
