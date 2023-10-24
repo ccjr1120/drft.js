@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>drft example</title>
+    <link rel="stylesheet" href="./assets/index.css" />
+    <style link="./index.css" />
     <style>
       * {
         box-sizing: border-box;
@@ -27,6 +29,12 @@
   </head>
   <body>
     <div id="app"><canvas id="drft" /></div>
+    <div class="float-bar">
+      <div id="pen" class="bar-item active"></div>
+      <!-- <div id="rect" class="bar-item"></div>
+      <div id="circle" class="bar-item"></div> -->
+      <div id="clear" class="bar-item"></div>
+    </div>
     <script type="module" src="./app.ts"></script>
   </body>
 </html>

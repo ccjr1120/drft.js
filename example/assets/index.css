@@ -1,0 +1,47 @@
+.float-bar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.bar-item {
+  position: relative;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  color: #ffffff23;
+  background-image: linear-gradient(to right, currentColor, currentColor),
+    linear-gradient(90deg, #8f41e9, #578aef);
+}
+.active {
+  color: #44d0e088;
+}
+
+#pen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-size: 24px 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('./pen.svg');
+}
+
+#clear::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-size: 22px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('./clear.svg');
+}
