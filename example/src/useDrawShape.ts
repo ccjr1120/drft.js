@@ -1,10 +1,10 @@
 import Drft from '../../src/index'
 const drawShape = (drft: ReturnType<typeof Drft>) => {
-  const drawLine = () => {
-    drft.setup()
+  const drawCircle = () => {
+    drft.draw.circle()
   }
 
-  return { drawLine }
+  return { drawCircle }
 }
 
 export default drawShape

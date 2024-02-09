@@ -3,6 +3,8 @@
     "ccjr",
     "commitlint",
     "drft",
-    "semistandard"
+    "pixi",
+    "semistandard",
+    "webgpu"
   ]
 }
