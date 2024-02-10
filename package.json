@@ -7,7 +7,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky && cd example && yarn",
     "dev-example": "cd example && yarn dev"
   },
   "lint-staged": {
