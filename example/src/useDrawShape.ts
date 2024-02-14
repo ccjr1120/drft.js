@@ -1,10 +1,14 @@
-import Drft from '../../src/index'
-const drawShape = (drft: ReturnType<typeof Drft>) => {
-  const drawCircle = () => {
-    drft.draw.circle()
+import Drft from '../../src/Drft'
+const drawShape = () => {
+  const drawRectangle = () => {
+    const rectangle = new Drft.Shape.Rectangle(
+      { width: 100, height: 100 },
+      { x: 200, y: 200 }
+    )
+    return rectangle
   }
 
-  return { drawCircle }
+  return { drawRectangle }
 }
 
 export default drawShape
