@@ -2,8 +2,11 @@ import Drft from '../../src/Drft'
 const drawShape = () => {
   const drawRectangle = () => {
     const rectangle = new Drft.Shape.Rectangle(
-      { width: 100, height: 100 },
-      { x: 200, y: 200 }
+      [Math.random() * 700 + 10, Math.random() * 700 + 10],
+      {
+        width: Math.random() * 39 + 100,
+        height: Math.random() * 59 + 200
+      }
     )
     return rectangle
   }

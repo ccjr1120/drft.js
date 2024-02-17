@@ -5,6 +5,7 @@
     "drft",
     "pixi",
     "semistandard",
-    "webgpu"
+    "webgpu",
+    "wgsl"
   ]
 }

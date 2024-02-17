@@ -1,8 +1,8 @@
-import Renderer from '../renderer/Renderer'
+import RendererManage from '../renderer/RendererManage'
 import { Shape } from '../shapes/misc/const'
 
 export default class Scene {
-  renderer = new Renderer()
+  renderer = RendererManage.getRenderer()
 
   add(shape: Shape) {
     this.renderer.draw(shape)

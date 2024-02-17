@@ -10,6 +10,6 @@ export default class Drft {
     const { clientWidth: width, clientHeight: height } = canvasEl.parentElement!
     canvasEl.width = width
     canvasEl.height = height
-    await RendererManage.getRenderer().setup(canvasEl)
+    await RendererManage.loadRenderer(canvasEl)
   }
 }
