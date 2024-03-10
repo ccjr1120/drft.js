@@ -1,4 +1,4 @@
-import Drft from '../../src/Drft'
+import Drft from '../../src'
 const drawShape = () => {
   const drawRectangle = () => {
     const rectangle = new Drft.Shape.Rectangle(

@@ -1,4 +1,4 @@
-import Drft from '../../src/Drft'
+import Drft from '../../src/index'
 import useDrawShape from './useDrawShape.ts'
 
 const canvasEl = document.getElementById('canvasEl') as HTMLCanvasElement

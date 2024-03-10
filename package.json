@@ -8,7 +8,8 @@
   "type": "module",
   "scripts": {
     "prepare": "husky && cd example && yarn",
-    "dev-example": "cd example && yarn dev"
+    "e": "cd example && yarn dev",
+    "test": "vitest"
   },
   "lint-staged": {
     "packages/**/*.{js,jsx,ts,tsx,json}": [
@@ -35,6 +36,7 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "typescript": "^5.3.3",
-    "vite": "^5.0.12"
+    "vite": "^5.0.12",
+    "vitest": "^1.3.1"
   }
 }
